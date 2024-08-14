@@ -13,29 +13,17 @@ import java.util.HashMap;
 @WebServlet(urlPatterns = "/team-test")
 public class TeamTest extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        CommonPeople commonPeople = new CommonPeople();
+        HashMap<String, String> person=commonPeople.getPerson();
+
         String client_ip = request.getRemoteHost();
-        HashMap<String,String> person = new HashMap<>();
-        person.put("192.168.219.70" , "송효진");
-        person.put("192.168.219.54" , "권동현");
-        person.put("192.168.219.74" , "강윤서");
-        person.put("192.168.219.77" , "지영은");
-        person.put("192.168.219.49" , "박성일");
-        person.put("192.168.219.60" , "박채연");
-        person.put("192.168.219.67" , "최명준");
-        person.put("192.168.219.42" , "이태화");
-        person.put("192.168.219.66" , "기노홍");
-        person.put("192.168.219.47" , "주진완");
-        person.put("192.168.219.72" , "이혜람");
-        person.put("192.168.219.52" , "임진호");
-        person.put("192.168.219.75" , "김민지");
-        person.put("192.168.219.76" , "서진환");
-
-
-        System.out.println(person.get(client_ip)+"님 입장!");
-        response.setContentType("text/html");
+        String name = person.get(client_ip);
+        System.out.println(client_ip);
+        response.setContentType("text/html; charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        if(!person.get(client_ip).isEmpty()){
+        if(name != null && !name.isEmpty()){
+            System.out.println(person.get(client_ip)+"님 입장!");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>강건 사이트</title>");
