@@ -5,17 +5,13 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "강건님 안녕하세요!" %>
-</h1>
+<h1><%= "강건님 안녕하세요!" %></h1>
 <br/>
-<div>
-    <a href="Ex01_request">Ex01_request</a>
-</div>
-<div>
-    <a href="team-test">team-test</a>
-</div>
-<div>
-    <a href="get">chat</a>
-</div>
+
+<a href="Ex01_request">Ex01_request</a><br/>
+<a href="team-test">team-test</a><br/>
+<a href="get">chat</a><br/>
+<a href="room.jsp">room</a><br/>
+
 </body>
 </html>
