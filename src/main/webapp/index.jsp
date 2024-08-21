@@ -12,6 +12,7 @@
 <a href="team-test">team-test</a><br/>
 <a href="get">chat</a><br/>
 <a href="room.jsp">room</a><br/>
+<a href="user-info.html">user-info</a><br/>
 
 </body>
 </html>
