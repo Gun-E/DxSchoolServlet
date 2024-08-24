@@ -1,1 +1,1 @@
-# DX School 서블릿 공부 저장소
+# DX School java 서블릿 공부 저장소
